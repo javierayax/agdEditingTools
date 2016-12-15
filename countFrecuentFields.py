@@ -1,7 +1,6 @@
 mxd = arcpy.mapping.MapDocument("current")
 layers = arcpy.mapping.ListLayers(mxd)
-
-         
+     
 dicFields = {}
 for layer in layers:
     fields = [field.name + "-" + field.type + "-" + str(field.length) for field in arcpy.ListFields(layer)]
