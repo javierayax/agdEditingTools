@@ -5,3 +5,4 @@ for layer in layers:
   if arcpy.Describe(layer).spatialReference.name == u'Unknown':
     if abs(arcpy.Describe(layer).extent.XMin) > 0 and abs(arcpy.Describe(layer).extent.XMin) < 180:
       layer.visible = 1
+arcpy.RefreshTOC()
